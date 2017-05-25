@@ -3,7 +3,7 @@ FROM alpine:3.5
 # Environment Variables
 ARG LIBVIPS_VERSION_MAJOR_MINOR=8.4
 ARG LIBVIPS_VERSION_PATCH=5
-ARG MOZJPEG_VERSION="v3.1"
+ARG MOZJPEG_VERSION="v3.2"
 
 # Install dependencies
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories && \
