@@ -2,7 +2,7 @@ FROM alpine:3.5
 
 # Environment Variables
 ARG LIBVIPS_VERSION_MAJOR_MINOR=8.5
-ARG LIBVIPS_VERSION_PATCH=6
+ARG LIBVIPS_VERSION_PATCH=9
 ARG MOZJPEG_VERSION="v3.2"
 
 # Install dependencies
@@ -43,4 +43,3 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repos
     rm -rf /tmp/mozjpeg && \
     apk del --purge .build-dependencies && \
     rm -rf /var/cache/apk/*
-
