@@ -1,9 +1,9 @@
 FROM alpine:3.10.1
 
 # Environment Variables
-ARG LIBVIPS_VERSION_MAJOR_MINOR=8.6
-ARG LIBVIPS_VERSION_PATCH=3
-ARG MOZJPEG_VERSION="v3.2"
+ARG LIBVIPS_VERSION_MAJOR_MINOR=8.8
+ARG LIBVIPS_VERSION_PATCH=1
+ARG MOZJPEG_VERSION="v3.3.1"
 
 # Install dependencies
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories && \
@@ -26,7 +26,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repos
     autoreconf -fiv && ./configure --prefix=/usr && make install && \
 
 # Install libvips
-    wget -O- https://github.com/jcupitt/libvips/releases/download/v${LIBVIPS_VERSION_MAJOR_MINOR}.${LIBVIPS_VERSION_PATCH}/vips-${LIBVIPS_VERSION_MAJOR_MINOR}.${LIBVIPS_VERSION_PATCH}.tar.gz | tar xzC /tmp && \
+    wget -O- https://github.com/libvips/libvips/releases/download/v${LIBVIPS_VERSION_MAJOR_MINOR}.${LIBVIPS_VERSION_PATCH}/vips-${LIBVIPS_VERSION_MAJOR_MINOR}.${LIBVIPS_VERSION_PATCH}.tar.gz | tar xzC /tmp && \
     cd /tmp/vips-${LIBVIPS_VERSION_MAJOR_MINOR}.${LIBVIPS_VERSION_PATCH} && \
     ./configure --prefix=/usr \
                 --without-python \
