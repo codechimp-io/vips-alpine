@@ -6,7 +6,7 @@ ARG LIBVIPS_VERSION_PATCH=1
 ARG MOZJPEG_VERSION="v3.3.1"
 
 # Install dependencies
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories && \
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.10/community" >> /etc/apk/repositories && \
     apk update && \
     apk upgrade && \
     apk add --update \
