@@ -1,4 +1,4 @@
-FROM alpine:3.14.0
+FROM alpine:3.20.0
 
 # Environment Variables
 ARG LIBVIPS_VERSION_MAJOR_MINOR=8.9
